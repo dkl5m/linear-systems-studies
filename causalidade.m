@@ -1,4 +1,5 @@
 % Ex.9.20
+t=0:0.1:20;
 h1=exp(-t)*2/3+exp(2*t)/3;
 figure(1);
 plot(t,h1)
