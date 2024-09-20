@@ -65,3 +65,11 @@ disp('ganho na frequencia w0')
 KHd=abs(2/(1-(3/4)*exp(-j*1*w0)+(1/8)*exp(-j*2*w0)))
 disp('fase em radianos na frequencia w0')
 phaseH=phase(2/(1-(3/4)*exp(-j*1*w0)+(1/8)*exp(-j*2*w0)))
+
+u=prbs(378,6,1);
+u=u-0.5;
+lu=length(u);
+y=dlsim([1 0.5],[-1.5 0.7],u);
+e=randn(378,1);
+e=0.3*(e-mnan(e));
+yi=dimpulse([1 0.5;1 -1.5 0.7],lu)
